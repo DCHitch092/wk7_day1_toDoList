@@ -1,0 +1,18 @@
+#list {
+  display: flex;
+  flex-direction: column;
+}
+li.low{
+  order: 1;
+  background: green;
+}
+
+li.med{
+  order: 0;
+  background: orange;
+}
+
+li.high {
+  order: -1;
+  background: red;
+}
