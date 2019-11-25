@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       ],
       newToDo: "",
-      newPriority: ""
+      newPriority: "",
+      listPriority: false
     },
     methods: {
       saveToDoItem: function() {
@@ -25,6 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
         this.newToDo = "";
         this.newPriority = "";
+      },
+      toggleSort: function() {
+        this.listPriority = !this.listPriority
       }
       // saveNewItem: function () {
       //   this.items.push({

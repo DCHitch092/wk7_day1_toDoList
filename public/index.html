@@ -15,8 +15,9 @@
         <input type="radio" id="med" v-model="newPriority" value="med">Med
         <input type="radio" id="high" v-model="newPriority" value="high">High
       <input type="submit" value="add your to-do" />
+      <button type="button" v-on:click='toggleSort'>sort by priority</button>
       </form>
-      <ul id="list">
+      <ul v-bind:class="{list: this.listPriority }">
         <li v-for="toDo in toDos" v-bind:class="[toDo.priority]">
           <span>{{ toDo.toDoName }}</span>
           <span><button type="button" name="to do done!">to do done!</button></span></li>
